@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DengueBot v2.0</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712010.png" alt="Bot">
+            <h2>DengueBot v2.0</h2>
+        </div>
+        
+        <div class="chat-box" id="chat-box">
+            {% for msg in historico %}
+                <div class="message {{ msg.remetente }}">
+                    {{ msg.texto | safe }}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="button-area">
+            <form method="POST" style="display: flex; gap: 10px; justify-content: center; width: 100%;">
+                {% for opcao in opcoes %}
+                    <button type="submit" name="escolha" value="{{ opcao }}">{{ opcao }}</button>
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
