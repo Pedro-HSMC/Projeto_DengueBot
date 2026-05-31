@@ -74,7 +74,7 @@ body {
 
 .button-area {
     padding: 15px;
-    background-color: #f0f2f5;
+    background-color: #676767;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -83,7 +83,7 @@ body {
 .button-area button {
     padding: 10px 20px;
     border: none;
-    background-color: #242626;
+    background-color: #161717;
     color: white;
     border-radius: 20px;
     cursor: pointer;
@@ -92,5 +92,5 @@ body {
 }
 
 .button-area button:hover {
-    background-color: #005c4b;
+    background-color: #484848;
 }
